@@ -66,7 +66,7 @@ namespace Game.Grid
                 cell.state = _newState;
         }
 
-        public enum State { Active, Static }
+        public enum State { Active, Static, Hidden }
 
         [System.Serializable]
         public class CellState

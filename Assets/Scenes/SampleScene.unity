@@ -245,7 +245,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &84658538
 MonoBehaviour:
@@ -272,6 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443519060}
   - component: {fileID: 443519059}
+  - component: {fileID: 443519061}
   m_Layer: 0
   m_Name: GridController
   m_TagString: Untagged
@@ -292,8 +293,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridSettings: {fileID: 11400000, guid: f9e088bd3111e754da826dd24af3e8bb, type: 2}
+  imageBank: {fileID: 11400000, guid: 09d4ea180f43a834d98dc69e45ffae01, type: 2}
+  matchQueue: {fileID: 443519061}
   gridLayout: {fileID: 537537420}
-  cardPrefab: {fileID: 7009361910906662699, guid: e991a9745e27f4b42819f11b0f47dbfc, type: 3}
+  cardPrefab:
+    m_AssetGUID: e991a9745e27f4b42819f11b0f47dbfc
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!4 &443519060
 Transform:
   m_ObjectHideFlags: 0
@@ -309,6 +316,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &443519061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443519058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dc2947ed54c85742b804df298a7d8f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseMatchScore: 100
+  comboBonus: 25
+  comboDecayTime: 3
+  mismatchHideDelay: 1
+  continuousMatching: 1
 --- !u!1 &537537418
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +545,7 @@ RectTransform:
   m_Children:
   - {fileID: 537537419}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

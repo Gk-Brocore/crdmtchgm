@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-namespace Game.ImageBank
+namespace Game.Images
 {
     [CreateAssetMenu(fileName = "ImageBank", menuName = "Game/ImageBank")]
     public class ImageBank : ScriptableObject

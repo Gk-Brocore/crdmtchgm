@@ -261,7 +261,7 @@ namespace Game.Addressable
                     {
                         // deactivate and enqueue
                         _instance.SetActive(false);
-                        _instance.transform.SetParent(transform, false); // keep out of scene root
+                            _instance.transform.SetParent(transform, false); // keep out of scene root
                         pool.pooled.Enqueue(_instance);
 
                         // Decrement ref-count for prefab key (because we still hold base prefab ref until pooled instance is destroyed)
@@ -509,7 +509,7 @@ namespace Game.Addressable
 
         #endregion
 
-        #region Debug & Examples
+        #region Debug 
 
         /// <summary>
         /// Simple debug dump to show cached assets and pool sizes.
