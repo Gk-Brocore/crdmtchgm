@@ -19,6 +19,9 @@ namespace Game.Images
             public AssetReference spriteRef;
         }
 
+        public string BankName;
+        public Vector2 imageSize;
+
         public List<Entry> entries = new List<Entry>();
 
         public AssetReference GetSpriteReferenceById(string _id)
@@ -62,12 +65,6 @@ namespace Game.Images
             }
 
             _output.Shuffle();
-
-            foreach(var _o in _output)
-            {
-                Debug.Log(_o);
-            }
-
             
             if (_count > _output.Count)
             {

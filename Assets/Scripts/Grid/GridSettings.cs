@@ -7,6 +7,7 @@ namespace Game.Grid
     [CreateAssetMenu(fileName = "GridSettings", menuName = "Grid/Grid Settings")]
     public class GridSettings : ScriptableObject
     {
+        public string gridName = "New Grid";
         [Header("Grid Settings")]
         [SerializeField]
         private int width = 4;

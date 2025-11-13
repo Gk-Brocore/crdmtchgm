@@ -147,12 +147,12 @@ namespace Game.Grid
                     {
                         string _id = _deck[_index];
                         var _sprite = await imageBank.GetSprite(_id);
-                        _cardView.Initialize(_id, _sprite, matchQueue);
+                        _cardView.Initialize(_id, _sprite,imageBank.imageSize , matchQueue);
                         _index++;
                         continue;
                     }
                     //empty init to hide
-                    _cardView.Initialize($"Card_{x}_{y}", null, matchQueue);
+                    _cardView.Initialize($"Card_{x}_{y}", null,Vector2.zero , matchQueue);
                 }
             }
 

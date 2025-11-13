@@ -35,7 +35,7 @@ namespace Game.Cards
 
         }
 
-        public void Initialize(string _id, Sprite _sprite, MemoryMatchManager _manager, bool _showDebug = false)
+        public void Initialize(string _id, Sprite _sprite, Vector2 _imgSize, MemoryMatchManager _manager, bool _showDebug = false)
         {
 
             if(_sprite == null)
@@ -50,7 +50,10 @@ namespace Game.Cards
             isRevealed = false;
 
             if (frontSprite != null)
+            {
+                frontSprite.rectTransform.sizeDelta = _imgSize;
                 frontSprite.sprite = _sprite;
+            }
 
             if (debugLabel != null)
                 debugLabel.text = _showDebug ? $"ID:{cardID}" : string.Empty;

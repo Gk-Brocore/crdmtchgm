@@ -1,4 +1,5 @@
 using Game.Cards;
+using Game.Variables;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,15 +21,23 @@ namespace Game.Managers
         public int baseMatchScore = 100;
         public int comboBonus = 25;
         public float comboDecayTime = 3f;
+        [SerializeField]
+        private IntVar score;
+        [SerializeField]
+        private IntVar comboCount;
 
         [Header("Gameplay")]
         public float mismatchHideDelay = 1f;
         public bool continuousMatching = true;
 
         private Queue<CardView> selectionQueue = new Queue<CardView>();
-        private int score = 0;
-        private int comboCount = 0;
+       
         private float lastMatchTime;
+
+        public void Start()
+        {
+            ResetScore();
+        }
 
         public void EnqueueCard(CardView _card)
         {
@@ -59,7 +68,7 @@ namespace Game.Managers
 
                 UpdateCombo();
                 int _points = baseMatchScore + (comboBonus * (comboCount - 1));
-                score += _points;
+                score.Increment( _points);
                 OnScoreUpdated?.Invoke(score);
                 OnComboUpdated?.Invoke(comboCount);
             }
@@ -68,7 +77,7 @@ namespace Game.Managers
                 OnMismatch?.Invoke(_first, _second);
 
                 // Reset combo if mismatch
-                comboCount = 0;
+                comboCount.SetValue(0);
                 OnComboUpdated?.Invoke(comboCount);
 
                 // Hide cards after small delay
@@ -84,11 +93,11 @@ namespace Game.Managers
         {
             if (Time.time - lastMatchTime <= comboDecayTime)
             {
-                comboCount++;
+                comboCount.Increment(1);
             }
             else
             {
-                comboCount = 1;
+                comboCount.SetValue(1);
             }
 
             lastMatchTime = Time.time;
@@ -96,8 +105,8 @@ namespace Game.Managers
 
         public void ResetScore()
         {
-            score = 0;
-            comboCount = 0;
+            score.SetValue(0);
+            comboCount.SetValue(0);
             lastMatchTime = 0;
             OnScoreUpdated?.Invoke(score);
             OnComboUpdated?.Invoke(comboCount);
