@@ -1,4 +1,5 @@
 using Game.Addressable;
+using Game.Utilities;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -49,6 +50,41 @@ namespace Game.Images
                     _entry.id = _name;
                 }
             }
+        }
+
+
+        public List<string> GetShuffled(int _count)
+        {
+            var _output = new List<string>();
+            foreach (var _entry in entries)
+            {
+                _output.Add(_entry.id);
+            }
+
+            _output.Shuffle();
+
+            foreach(var _o in _output)
+            {
+                Debug.Log(_o);
+            }
+
+            
+            if (_count > _output.Count)
+            {
+                Debug.Log("Invalid Count");
+                return _output;
+            }
+
+            var _toRemove = _output.Count - _count;
+           
+
+            for (int _index = _toRemove - 1; _index >= 0; _index--)
+            {
+                _output.RemoveAt(_index);
+            }
+
+
+            return _output;
         }
 
     }

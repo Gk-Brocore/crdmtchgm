@@ -17,22 +17,40 @@ namespace Game.Cards
         public TextMeshProUGUI debugLabel;
 
         [Header("Flip States")]
-        public Sprite backSprite;
-        public Sprite frontSprite; 
+        public Image backSprite;
+        public Image frontSprite; 
         private bool isRevealed = false;
 
         private MemoryMatchManager matchManager;
+        private Animator animator;
+
+        private int frontAnimHash;
+        private int BackAnimHash;
+
+        private void Awake()
+        {
+            animator = GetComponent<Animator>();
+            frontAnimHash = Animator.StringToHash("Front");
+            BackAnimHash = Animator.StringToHash("Back");
+
+        }
 
         public void Initialize(string _id, Sprite _sprite, MemoryMatchManager _manager, bool _showDebug = false)
         {
+
+            if(_sprite == null)
+            {
+                SetHidden(); 
+                return;
+            }
+
             cardID = _id;
-            frontSprite = _sprite;
             matchManager = _manager;
             isMatched = false;
             isRevealed = false;
 
-            if (cardImage != null)
-                cardImage.sprite = backSprite;
+            if (frontSprite != null)
+                frontSprite.sprite = _sprite;
 
             if (debugLabel != null)
                 debugLabel.text = _showDebug ? $"ID:{cardID}" : string.Empty;
@@ -44,13 +62,21 @@ namespace Game.Cards
             }
         }
 
+        public void SetHidden()
+        {
+            cardImage.color = new Color(0, 0, 0, 0);
+            if(button!=null) 
+                button.interactable = false;
+            backSprite.gameObject.SetActive(false);
+            animator.enabled = false;
+        }
+
         public void Reveal()
         {
             if (isRevealed || isMatched) 
                 return;
             isRevealed = true;
-            if (cardImage != null && frontSprite != null)
-                cardImage.sprite = frontSprite;
+            animator.SetTrigger(frontAnimHash);
         }
 
         public void Hide()
@@ -58,8 +84,7 @@ namespace Game.Cards
             if (isMatched) 
                 return;
             isRevealed = false;
-            if (cardImage != null)
-                cardImage.sprite = backSprite;
+            animator.SetTrigger(BackAnimHash);
         }
 
         public void SetMatched(bool matched)
@@ -70,6 +95,11 @@ namespace Game.Cards
                 if (button != null) 
                     button.interactable = false;
             }
+        }
+
+        private void OnDisable()
+        {
+            button.onClick.RemoveAllListeners();
         }
     }
 }

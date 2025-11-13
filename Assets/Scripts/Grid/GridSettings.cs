@@ -42,6 +42,11 @@ namespace Game.Grid
         public int TotalUseableCells { get => totalUseableCells; set => totalUseableCells = value; }
         public int TotalCombinations { get => totalCombinations; set => totalCombinations = value; }
 
+        private void OnValidate()
+        {
+            CalulateUseable();
+        }
+
         public void Initialize()
         {
             cells.Clear();

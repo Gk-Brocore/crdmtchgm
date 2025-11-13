@@ -2,9 +2,11 @@ using Game.Addressable;
 using Game.Cards;
 using Game.Images;
 using Game.Managers;
+using Game.Utilities;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -20,7 +22,11 @@ namespace Game.Grid
         private GridSettings gridSettings;
         [SerializeField]
         private ImageBank imageBank;
-        public MemoryMatchManager matchQueue;
+        [SerializeField]
+        private MemoryMatchManager matchQueue;
+        [Header("Game")]
+        [SerializeField]
+        private float firstRevealedTime;
 
         [Header("UI Elements")]
         [SerializeField]
@@ -30,7 +36,7 @@ namespace Game.Grid
 
 
         private GridContainer<GridCellData> grid;
-        private List<GameObject> spawnedCards = new List<GameObject>();
+        private List<CardView> spawnedCards = new List<CardView>();
 
         private RectTransform rectTransform;
 
@@ -104,6 +110,8 @@ namespace Game.Grid
             gridLayout.spacing = gridSettings.CellSpacing;
             gridLayout.cellSize = gridSettings.CellSize;
             gridLayout.padding = gridSettings.Padding;
+
+            gridSettings.CalulateUseable();
         }
 
         private async void SpawnUICards()
@@ -115,60 +123,61 @@ namespace Game.Grid
                     Destroy(_card);
             }
             spawnedCards.Clear();
+            
+            var _imagesId = imageBank.GetShuffled(gridSettings.TotalCombinations);
 
-            int _total = gridSettings.Width * gridSettings.Height;
+            var _deck = MakeDeck(_imagesId);
 
+
+            int _index = 0;
             for (int y = 0; y < gridSettings.Height; y++)
             {
                 for (int x = 0; x < gridSettings.Width; x++)
                 {
+
+                    var _data = grid.GetValue(x, y);
+                   
+
                     GameObject _card = await AddressableManager.Instance.InstantiateAsync(cardPrefab, Vector3.zero, Quaternion.identity, gridLayout.transform);
-
-                    var _cardView = _card.GetComponent<CardView>();
-                    _cardView.Initialize($"Card_{x}_{y}", null, matchQueue);
-
                     _card.name = $"Card_{x}_{y}";
-                    var _img = _card.GetComponent<Image>();
+                    var _cardView = _card.GetComponent<CardView>();
 
-                    if (_img != null)
+                    spawnedCards.Add(_cardView);
+                    if (_data.state != GridSettings.State.Hidden)
                     {
-                        _img.color = (grid.GetValue(x, y).state == GridSettings.State.Active)
-                        ? Color.green
-                        : Color.white;
-                     }
-
-
-                    spawnedCards.Add(_card);
-
-                    var _button = _card.GetComponent<Button>();
-                    if (_button != null)
-                    {
-                        int cx = x, cy = y;
-                        _button.onClick.AddListener(() => OnCardClicked(cx, cy, _card));
+                        string _id = _deck[_index];
+                        var _sprite = await imageBank.GetSprite(_id);
+                        _cardView.Initialize(_id, _sprite, matchQueue);
+                        _index++;
+                        continue;
                     }
+                    //empty init to hide
+                    _cardView.Initialize($"Card_{x}_{y}", null, matchQueue);
                 }
             }
-        }
 
-        private void OnCardClicked(int _x, int _y, GameObject _card)
-        {
-            var _current = grid.GetValue(_x, _y);
-            var _next = (_current.state == GridSettings.State.Static)
-                ? GridSettings.State.Active
-                : GridSettings.State.Static;
-
-            var _cellData = grid.GetValue(_x, _y);
-            _cellData.state = _next;
-
-            var _img = _card.GetComponent<Image>();
-            if (_img != null)
+            foreach (var _card in spawnedCards)
             {
-                _img.color = (_next == GridSettings.State.Active)
-                    ? Color.green
-                    : Color.white;
+                _card.Reveal();
             }
-
+            await Task.Delay(TimeSpan.FromSeconds(firstRevealedTime));
+            foreach (var _card in spawnedCards)
+            {
+                _card.Hide();
+            }
         }
+
+
+        private List<string> MakeDeck(List<string> _input)
+        {
+            List<string> _all = new();
+            _all.AddRange(_input);
+            _all.AddRange(_input);
+            _all.Shuffle();
+            return _all;
+        }
+
+      
 
         public GridSettings.State GetCellState(Vector2Int _gridPos)
         {

@@ -371,8 +371,8 @@ MonoBehaviour:
   cardImage: {fileID: 1298183936285225806}
   button: {fileID: -271046109222957764}
   debugLabel: {fileID: 0}
-  backSprite: {fileID: 0}
-  frontSprite: {fileID: 0}
+  backSprite: {fileID: 1643955009}
+  frontSprite: {fileID: 48743670}
 --- !u!95 &3965760255979102887
 Animator:
   serializedVersion: 5
