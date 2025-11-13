@@ -210,6 +210,19 @@ namespace Game.Grid
         private void MatchQueue_OnMatch(CardView _card1, CardView _card2)
         {
             Debug.Log($"Match: {_card1.cardID} vs {_card2.cardID}");
+
+            StartCoroutine(WaitForAnim(_card1));
+            StartCoroutine(WaitForAnim(_card2));
+
+            IEnumerator WaitForAnim(CardView _card)
+            {
+                while (_card.IsAnimDone == false)
+                {
+                    yield return null;
+                }
+                _card.SetHidden();
+                // AddressableManager.Instance.ReleaseInstance(cardPrefab, _card.gameObject);
+            }
         }
 
         private void OnDisable()
