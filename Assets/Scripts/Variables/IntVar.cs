@@ -6,25 +6,12 @@ using UnityEngine;
 namespace Game.Variables
 {
     [CreateAssetMenu(fileName = "New Int Variable", menuName = "Variables/Int Variable")]
-    public class IntVar : ScriptableObject
+    public class IntVar : BaseVar<int>
     {
-        public int value;
-
-        public Action<int> OnValueChanged;
-
-        public void SetValue(int newValue)
+      
+        public override void UpdateValue(int _value)
         {
-            value = newValue;
-            OnValueChanged?.Invoke(value);
-        }
-        public int GetValue()
-        {
-            return value;
-        }
-
-        public void Increment(int amount)
-        {
-            value += amount;
+            value += _value;
             OnValueChanged?.Invoke(value);
         }
 

@@ -68,7 +68,7 @@ namespace Game.Managers
 
                 UpdateCombo();
                 int _points = baseMatchScore + (comboBonus * (comboCount - 1));
-                score.Increment( _points);
+                score.UpdateValue( _points);
                 OnScoreUpdated?.Invoke(score);
                 OnComboUpdated?.Invoke(comboCount);
             }
@@ -93,7 +93,7 @@ namespace Game.Managers
         {
             if (Time.time - lastMatchTime <= comboDecayTime)
             {
-                comboCount.Increment(1);
+                comboCount.UpdateValue(1);
             }
             else
             {

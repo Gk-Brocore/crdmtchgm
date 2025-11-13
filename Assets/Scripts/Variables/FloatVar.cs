@@ -6,30 +6,14 @@ using UnityEngine;
 namespace Game.Variables
 {
     [CreateAssetMenu(fileName = "New Float Variable", menuName = "Variables/Float Variable")]
-    public class FloatVar : ScriptableObject
+    public class FloatVar : BaseVar<float>
     {
-        [SerializeField]
-        private float value;
 
-        public Action<float> OnValueChanged;
-
-        public void SetValue(float _newValue)
+        public override void UpdateValue(float _value)
         {
-            value = _newValue;
+            value += _value;
             OnValueChanged?.Invoke(value);
         }
-        public float GetValue()
-        {
-            return value;
-        }
-
-        public void Increment(float _delta)
-        {
-            value += _delta;
-            OnValueChanged?.Invoke(value);
-        }
-
- 
 
         public static implicit operator float(FloatVar _float)
         {
