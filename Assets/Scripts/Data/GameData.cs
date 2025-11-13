@@ -1,5 +1,6 @@
 using Game.Grid;
 using Game.Images;
+using Game.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,10 +12,10 @@ namespace Game.Data
     {
 
         [SerializeField]
-        private List<GridSettings> Grids;
+        private SerializableDictionary<string,GridSettings> Grids;
 
         [SerializeField]
-        private List<ImageBank> ImageBanks;
+        private SerializableDictionary<string, ImageBank> ImageBanks;
 
        
     }
