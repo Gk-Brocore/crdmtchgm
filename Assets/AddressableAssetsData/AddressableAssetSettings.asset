@@ -43,6 +43,8 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: ae541b57e8296564595ac742b7be8fae, type: 2}
   - {fileID: 11400000, guid: 8b78488046243db4088bce04687af7f6, type: 2}
+  - {fileID: 11400000, guid: 4e3be8f36ef3e0241aea250f990c3154, type: 2}
+  - {fileID: 11400000, guid: cfca04c3d73ff414cb58941f59de0e3c, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -84,6 +86,9 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - Animals
+    - Fruits
+    - FrontImage
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 1a1fc9b46dda19549a828b1c612930e5, type: 2}

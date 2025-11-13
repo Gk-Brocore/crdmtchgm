@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FruitsAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 8e0b046e5cb4a6443a078186a76c9765, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -4112882534976499296, guid: 30c43330a83965141974e97c1c01d7ef, type: 3}
+  - {fileID: -2237083361270571772, guid: a49313a0ee76bd043ae6dc392b7adcb5, type: 3}
+  - {fileID: -7247400609401495874, guid: bfc3e8b16f81e394c9a418886fa7a200, type: 3}
+  - {fileID: 6980555365878581770, guid: 84930c32d4d626a419164571659a0072, type: 3}
+  - {fileID: -4696285938682019929, guid: 24b8d7e2758e4ce47aabeee2c1e87b61, type: 3}
+  - {fileID: 2789393199743927404, guid: 4136704355e6dc14c80e1c4513597e8e, type: 3}
+  - {fileID: 5921690456534884042, guid: 27090d4349ff0c4489194e753aaec7c0, type: 3}
+  - {fileID: -4750209806655799429, guid: c89cb7635b9d3024484011ab81eafc19, type: 3}
+  - {fileID: -5791217858758669328, guid: aee50583968dbff4ca3fe1bda34db59f, type: 3}
+  - {fileID: -8848692819729959983, guid: 10b0b983365e98445babe56458ff5cac, type: 3}
+  - {fileID: 8146155988809780988, guid: c4eabba3c77cf5e4b8181970dd50c85c, type: 3}
+  - {fileID: -3386906297384044404, guid: a857a424a7144194aa64ead28d0d018b, type: 3}
+  - {fileID: -7057434880062421226, guid: 122ecf34d20b1dd40868d61292804f09, type: 3}
+  - {fileID: -6431078301474184626, guid: 9164058492ea4b84080c49e77bad4ea9, type: 3}
+  - {fileID: -5816592850277954629, guid: b65c28059717ca640b631d137891429f, type: 3}
+  - {fileID: -2537621298587461304, guid: 66283015f1d23164fbd0c63bcb5bc9e5, type: 3}
+  - {fileID: 3506999573820261914, guid: 2e179c2559fa5a043b6357f0458cffb7, type: 3}
+  - {fileID: 6609000571501192827, guid: 3644d145dae8c3148862fc071aefdc09, type: 3}
+  - {fileID: -8037128599670238717, guid: e8fe9585cfdd89141bbc6a1374a5e418, type: 3}
+  - {fileID: 3914510275817374586, guid: 1a2eeb58a972429408124810479f6dc4, type: 3}
+  - {fileID: 8495642495149920525, guid: ae15e5c8730f0be46a1c3f72d857d064, type: 3}
+  - {fileID: 7888829916495183132, guid: c88f83e88ecc62d44a45b9c685b4a953, type: 3}
+  - {fileID: 8947749660106057243, guid: 9cd63ff8f28cafa44920a51b61b52f59, type: 3}
+  - {fileID: -2061829076374550246, guid: 084dc2099bd46e3439d4474de10217c1, type: 3}
+  - {fileID: -3407805605806460260, guid: 476c9c4994f35944f9e12122bd4da15e, type: 3}
+  - {fileID: -4023824055331032616, guid: 557ae3994bc7c0448a70f61cf290d0e7, type: 3}
+  - {fileID: 4245524661865495135, guid: 1ecb94990b6742842b8f75171d36d351, type: 3}
+  - {fileID: -1730600070085567036, guid: 2d274cc9c2d5f09428468f86f20d2e8b, type: 3}
+  - {fileID: -4953028422798213847, guid: f067890a31e650f46bab951f3ffd5ae8, type: 3}
+  - {fileID: -4584878237461184704, guid: 3b7bfc6a6765ac544bf62d7fa03e04df, type: 3}
+  - {fileID: 6116771806728403733, guid: 159f088a560c6614d8daac9c1a56d35b, type: 3}
+  - {fileID: -3946612055665836118, guid: a22a9bdaa20c16e4493d6520014c3492, type: 3}
+  - {fileID: 6452560563705181311, guid: a11f80bb3c96af749a6bbb9970c440bc, type: 3}
+  - {fileID: -6075473056725195274, guid: 47384eec99353244c83464b454349201, type: 3}
+  - {fileID: 126692058012832377, guid: c183d46db154ee7439fc27a5e018c93f, type: 3}
+  - {fileID: -2015139764405176994, guid: fdb434dd4c24f4441b236d3dbaa0fdee, type: 3}
+  - {fileID: -6725965872243440687, guid: f7d9621e72bd3e14c9b0789c762cea85, type: 3}
+  - {fileID: 7897533479186361835, guid: 0ac6a5debc0a5904ca6bc51d8f370b30, type: 3}
+  - {fileID: -4065582907265667202, guid: ef70a06f605c01248ac8a6a22ca7a1cb, type: 3}
+  - {fileID: 1695098439013530518, guid: 86ba686f67428a14daf21d4d5b5ab4a9, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Fruits Assets_Lemon_0
+  - Fruits Assets_Half Apple_0
+  - Fruits Assets_Avocardo_0
+  - Fruits Assets_Mushroom_0
+  - Fruits Assets_Half Strawberry_0
+  - Fruits Assets_Broccoli_0
+  - Fruits Assets_Watermelon_0
+  - Fruits Assets_Banana_0
+  - Fruits Assets_Half Pineapple_0
+  - Fruits Assets_Onion_0
+  - Fruits Assets_Cherry_0
+  - Fruits Assets_Half Pear_0
+  - Fruits Assets_Half Corn_0
+  - Fruits Assets_Half Watermelon_0
+  - Fruits Assets_Half Tomato_0
+  - Fruits Assets_Half Pumpkin_0
+  - Fruits Assets_Peas_0
+  - Fruits Assets_Half Coconut_0
+  - Fruits Assets_Carrot_0
+  - Fruits Assets_Half Avocardo_0
+  - Fruits Assets_Peeled Banana_0
+  - Fruits Assets_Pumpkin_0
+  - Fruits Assets_Celery_0
+  - Fruits Assets_Half Onion_0
+  - Fruits Assets_Half Orange_0
+  - Fruits Assets_Half Pepper_0
+  - Fruits Assets_Potato_0
+  - Fruits Assets_Pear_0
+  - Fruits Assets_Pineapple_0
+  - Fruits Assets_Berries_0
+  - Fruits Assets_Coconut_0
+  - Fruits Assets_Apple_0
+  - Fruits Assets_Corn_0
+  - Fruits Assets_Cucumber_0
+  - Fruits Assets_Orange_0
+  - Fruits Assets_Half Cucumber_0
+  - Fruits Assets_Strawberry_0
+  - Fruits Assets_Pepper_0
+  - Fruits Assets_Tomato_0
+  - Fruits Assets_Half Lemon_0
+  m_RenderDataMap: {}
+  m_Tag: FruitsAtlas
+  m_IsVariant: 0

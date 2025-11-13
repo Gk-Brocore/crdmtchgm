@@ -11,7 +11,7 @@ namespace Game.Images
     [CreateAssetMenu(fileName = "ImageBank", menuName = "Game/ImageBank")]
     public class ImageBank : ScriptableObject
     {
-        [Serializable]  
+        [Serializable]
         public class Entry
         {
             public string id;
@@ -36,6 +36,19 @@ namespace Game.Images
         {
             var _assetRef = GetSpriteReferenceById(_id);
             return await AddressableManager.Instance.LoadImageAsync<Sprite>(_assetRef);
+        }
+
+        [ContextMenu("Get Names")]
+        public void GetNames()
+        {
+            foreach (var _entry in entries)
+            {
+                var _name = _entry.spriteRef.SubObjectName;
+                if (!string.IsNullOrEmpty(_name))
+                {
+                    _entry.id = _name;
+                }
+            }
         }
 
     }

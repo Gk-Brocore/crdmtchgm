@@ -31,7 +31,17 @@ namespace Game.Grid
             }
 
             GUILayout.Space(10);
-            if (settings.showEditorPreview)
+
+            if (settings.TotalUseableCells % 2 == 0)
+            {
+                EditorGUILayout.HelpBox($"Total Useable Cells: {settings.TotalUseableCells}\nTotal Possible Pairs: {settings.TotalCombinations}", MessageType.Info);
+            }
+            else
+            {
+                EditorGUILayout.HelpBox($"Total Useable Cells: {settings.TotalUseableCells}\nTotal Possible Pairs: {settings.TotalCombinations}\n\nWarning: Odd number of useable cells may lead to unmatched cards!", MessageType.Warning);
+            }
+
+                if (settings.showEditorPreview)
             {
                 previewCellSize = EditorGUILayout.FloatField("Preview Scale : Cell Size /", previewCellSize);
                 DrawGridPreview();
@@ -63,7 +73,7 @@ namespace Game.Grid
 
                     Rect _cellRect = new Rect(_px, _py, _cellSizeX, _cellSizey);
 
-                    Color _fill = _state == GridSettings.State.Active ? Color.green : Color.gray;
+                    Color _fill = _state == GridSettings.State.Static ? Color.green : Color.gray;
                     EditorGUI.DrawRect(_cellRect, _fill);
                     Handles.color = Color.black;
                     Handles.DrawLine(new Vector3(_px, _py), new Vector3(_px + _cellSizeX, _py));
@@ -72,10 +82,11 @@ namespace Game.Grid
                     if (Event.current.type == EventType.MouseDown && _cellRect.Contains(Event.current.mousePosition))
                     {
                         Undo.RecordObject(settings, "Toggle Cell State");
-                        _cell.state = _cell.state == GridSettings.State.Active
-                            ? GridSettings.State.Static
-                            : GridSettings.State.Active;
+                        _cell.state = _cell.state == GridSettings.State.Static
+                            ? GridSettings.State.Hidden
+                            : GridSettings.State.Static;
                         EditorUtility.SetDirty(settings);
+                        settings.CalulateUseable();
                         Event.current.Use();
                     }
                 }

@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e185fb27a852649827eb660cac395b, type: 3}
+  m_Name: FruitsImageBank
+  m_EditorClassIdentifier: 
+  entries:
+  - id: Apple
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Apple_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Avocardo
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Avocardo_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Banana
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Banana_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Berries
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Berries_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Broccoli
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Broccoli_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Carrot
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Carrot_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Celery
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Celery_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Coconut
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Coconut_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Corn
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Corn_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Cucumber
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Cucumber_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: HalfApple
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Half Apple_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: HalfAvocardo
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Half Avocardo_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: HalfCoconut
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Half Coconut_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: HalfCorn
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Half Corn_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: HalfCucumber
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Half Cucumber_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: HalfLemon
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Half Lemon_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: HalfOnion
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Half Onion_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: HalfPear
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Half Pear_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: HalfPumpkin
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Half Pumpkin_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: HalfPepper
+    spriteRef:
+      m_AssetGUID: fb17c2712f334a146a02e1f1bafec6e6
+      m_SubObjectName: Fruits Assets_Half Pepper_0
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0

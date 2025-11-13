@@ -29,6 +29,9 @@ namespace Game.Grid
         [Tooltip("Mark cells as active (playable) or static (non-playable)")]
         public List<CellState> cells = new List<CellState>();
 
+        private int totalUseableCells;
+        private int totalCombinations;
+
         public int Width { get => width; set => width = value; }
         public int Height { get => height; set => height = value; }
         public Vector2 CellSize { get => cellSize; set => cellSize = value; }
@@ -36,6 +39,8 @@ namespace Game.Grid
 
         public RectOffset Padding { get => padding; set => padding = value; }
         public Vector2 Origin { get => origin; set => origin = value; }
+        public int TotalUseableCells { get => totalUseableCells; set => totalUseableCells = value; }
+        public int TotalCombinations { get => totalCombinations; set => totalCombinations = value; }
 
         public void Initialize()
         {
@@ -47,16 +52,29 @@ namespace Game.Grid
                     cells.Add(new CellState
                     {
                         position = new Vector2Int(x, y),
-                        state = State.Active
+                        state = State.Static
                     });
                 }
             }
+            CalulateUseable();
+        }
+
+        public void CalulateUseable()
+        {
+            TotalUseableCells = 0;
+            foreach (var cell in cells)
+            {
+                if (cell.state == State.Static)
+                    TotalUseableCells++;
+            }
+
+            TotalCombinations = TotalUseableCells / 2;
         }
 
         public State GetCellState(Vector2Int _pos)
         {
             var cell = cells.Find(c => c.position == _pos);
-            return cell != null ? cell.state : State.Static;
+            return cell != null ? cell.state : State.Hidden;
         }
 
         public void SetCellState(Vector2Int _pos, State _newState)

@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Animals
+  m_EditorClassIdentifier: 
+  m_GroupName: Animals
+  m_Data:
+    m_SerializedData: []
+  m_GUID: e12e61d6da52883449ed02c786028fdf
+  m_SerializeEntries:
+  - m_GUID: 5fd4899d3cd14a54cbdcc992e219f6cf
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image10.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: daf89e08b816bc047b9cc95ae2eb1f2f
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image11.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: 19b93fb45c5b1714b9a4dfcf0d618083
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image18.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: 51bb8880ccbed944387448b533c5643a
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image12.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: 3b0e8008c9e082b41a1d9c4c9f23818a
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image8.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: 39dee74333027ea48bc25d44da240693
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: ea79b51b8dd528d4ebe460580798ca12
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image19.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: 260dca4c37576c845b18eca48a5a8006
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: dfa5fbe11db6deb4fb5abb25dce4b077
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: 07a3591571d6e67448fedd59441d7661
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image6.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: 385e02637cfdc3f4cbe9571db75a60d0
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image7.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: 51ee915208b67e8419a6375a3fb252d3
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image5.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: 37943c41ecc2d9043953fc734e117298
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image14.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: 2a047756bd8d5304eb934b44666325eb
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image13.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: d242536bb94de0c49a305e81675a1397
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image15.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: 1fb39ee3fbc50114abe776b252a75321
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image17.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: bf57c6e9cbeb6754ca139359aff50387
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image9.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: dca1a8a2781f4b041bba3189e6285c46
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: a289e2162d4e4c340a395d27115d5dbe
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/FreeAnimalsPNG/Image16.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  - m_GUID: 66b708abea411e84e96ca51eab82f6a6
+    m_Address: Assets/Sprites/Animals/19FreeAnimals/AnimalsAtlas.spriteatlas
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animals
+    - FrontImage
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: fc966cc9040d25547892d2a11e9d9dee, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5adc460a858330b4890590789658be90, type: 2}
+    - {fileID: 11400000, guid: 15c63e67be0ba094b84ee1af74e0f482, type: 2}

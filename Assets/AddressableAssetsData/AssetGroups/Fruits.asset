@@ -1,0 +1,287 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Fruits
+  m_EditorClassIdentifier: 
+  m_GroupName: Fruits
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 6f1a4d4acd153e64ebb0ad38b9340c22
+  m_SerializeEntries:
+  - m_GUID: a22a9bdaa20c16e4493d6520014c3492
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Apple.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: bfc3e8b16f81e394c9a418886fa7a200
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Avocardo.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: c89cb7635b9d3024484011ab81eafc19
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Banana.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 3b7bfc6a6765ac544bf62d7fa03e04df
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Berries.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 4136704355e6dc14c80e1c4513597e8e
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Broccoli.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: e8fe9585cfdd89141bbc6a1374a5e418
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Carrot.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 9cd63ff8f28cafa44920a51b61b52f59
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Celery.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: c4eabba3c77cf5e4b8181970dd50c85c
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Cherry.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 159f088a560c6614d8daac9c1a56d35b
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Coconut.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: a11f80bb3c96af749a6bbb9970c440bc
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Corn.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 47384eec99353244c83464b454349201
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Cucumber.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: a49313a0ee76bd043ae6dc392b7adcb5
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Apple.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 1a2eeb58a972429408124810479f6dc4
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Avocardo.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 3644d145dae8c3148862fc071aefdc09
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Coconut.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 122ecf34d20b1dd40868d61292804f09
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Corn.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: fdb434dd4c24f4441b236d3dbaa0fdee
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Cucumber.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 86ba686f67428a14daf21d4d5b5ab4a9
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Lemon.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 084dc2099bd46e3439d4474de10217c1
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Onion.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 476c9c4994f35944f9e12122bd4da15e
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Orange.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: a857a424a7144194aa64ead28d0d018b
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Pear.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 557ae3994bc7c0448a70f61cf290d0e7
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Pepper.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: aee50583968dbff4ca3fe1bda34db59f
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Pineapple.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 66283015f1d23164fbd0c63bcb5bc9e5
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Pumpkin.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 24b8d7e2758e4ce47aabeee2c1e87b61
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Strawberry.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: b65c28059717ca640b631d137891429f
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Tomato.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 9164058492ea4b84080c49e77bad4ea9
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Half
+      Watermelon.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 30c43330a83965141974e97c1c01d7ef
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Lemon.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 84930c32d4d626a419164571659a0072
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Mushroom.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 10b0b983365e98445babe56458ff5cac
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Onion.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: c183d46db154ee7439fc27a5e018c93f
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Orange.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 2d274cc9c2d5f09428468f86f20d2e8b
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Pear.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 2e179c2559fa5a043b6357f0458cffb7
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Peas.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: ae15e5c8730f0be46a1c3f72d857d064
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Peeled
+      Banana.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 0ac6a5debc0a5904ca6bc51d8f370b30
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Pepper.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: f067890a31e650f46bab951f3ffd5ae8
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Pineapple.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 1ecb94990b6742842b8f75171d36d351
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Potato.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: c88f83e88ecc62d44a45b9c685b4a953
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Pumpkin.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: f7d9621e72bd3e14c9b0789c762cea85
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Strawberry.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: ef70a06f605c01248ac8a6a22ca7a1cb
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Tomato.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: 27090d4349ff0c4489194e753aaec7c0
+    m_Address: Assets/Sprites/Fruit Pack(High resolution PNGS)/Fruits Assets_Watermelon.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  - m_GUID: fb17c2712f334a146a02e1f1bafec6e6
+    m_Address: Assets/Sprites/FruitsAtlas.spriteatlas
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FrontImage
+    - Fruits
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: fc966cc9040d25547892d2a11e9d9dee, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8d046308b3c137949b79694a91a9df22, type: 2}
+    - {fileID: 11400000, guid: e3f38c46661cbf146afd933e78c5d55c, type: 2}

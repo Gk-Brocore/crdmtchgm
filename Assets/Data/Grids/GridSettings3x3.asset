@@ -26,20 +26,20 @@ MonoBehaviour:
   showEditorPreview: 1
   cells:
   - position: {x: 0, y: 0}
-    state: 0
-  - position: {x: 0, y: 1}
-    state: 0
-  - position: {x: 0, y: 2}
-    state: 0
-  - position: {x: 1, y: 0}
-    state: 0
-  - position: {x: 1, y: 1}
     state: 1
+  - position: {x: 0, y: 1}
+    state: 1
+  - position: {x: 0, y: 2}
+    state: 1
+  - position: {x: 1, y: 0}
+    state: 1
+  - position: {x: 1, y: 1}
+    state: 2
   - position: {x: 1, y: 2}
-    state: 0
+    state: 1
   - position: {x: 2, y: 0}
-    state: 0
+    state: 1
   - position: {x: 2, y: 1}
     state: 1
   - position: {x: 2, y: 2}
-    state: 0
+    state: 1

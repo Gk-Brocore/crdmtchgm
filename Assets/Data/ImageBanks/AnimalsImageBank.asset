@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e185fb27a852649827eb660cac395b, type: 3}
+  m_Name: AnimalsImageBank
+  m_EditorClassIdentifier: 
+  entries:
+  - id: Porcupine
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image1
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Duck
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image2
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Chameleon
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image3
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: SeaHorse
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image4
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Cat
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image5
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Spider
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image6
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Lion
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image7
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Fox
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image8
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Bat
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image9
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Racoon
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image10
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: GoldFish
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image11
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Snail
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image12
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Mouse
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image13
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Tiger
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image14
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Snake
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image15
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Squirrel
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image16
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Eagle
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image17
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Frog
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image18
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
+  - id: Turtle
+    spriteRef:
+      m_AssetGUID: 66b708abea411e84e96ca51eab82f6a6
+      m_SubObjectName: Image19
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 0
