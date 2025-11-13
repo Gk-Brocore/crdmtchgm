@@ -1,4 +1,6 @@
+using Game.Addressable;
 using Game.Managers;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -21,17 +23,28 @@ namespace Game.Cards
         public Image frontSprite; 
         private bool isRevealed = false;
 
+        public string clickSound = "CardClick";
+
         private MemoryMatchManager matchManager;
         private Animator animator;
 
         private int frontAnimHash;
         private int BackAnimHash;
 
+        private int matchHash;
+        private int mismatchHash;
+
+        private bool isAnimDone;
+
+        public bool IsAnimDone { get => isAnimDone; set => isAnimDone = value; }
+
         private void Awake()
         {
             animator = GetComponent<Animator>();
             frontAnimHash = Animator.StringToHash("Front");
             BackAnimHash = Animator.StringToHash("Back");
+            matchHash = Animator.StringToHash("Match");
+            mismatchHash = Animator.StringToHash("Mismatch");
 
         }
 
@@ -61,8 +74,14 @@ namespace Game.Cards
             if (button != null)
             {
                 button.onClick.RemoveAllListeners();
-                button.onClick.AddListener(() => matchManager.EnqueueCard(this));
+                button.onClick.AddListener(() => OnCardClick());
             }
+        }
+
+        private void OnCardClick()
+        {
+            AudioConductor.PlaySfx(clickSound);
+            matchManager.EnqueueCard(this);
         }
 
         public void SetHidden()
@@ -97,12 +116,26 @@ namespace Game.Cards
             {
                 if (button != null) 
                     button.interactable = false;
+
+                animator.SetTrigger(matchHash);
             }
+        }
+
+        public void MatchedAnim()
+        {
+            isAnimDone = true;
+        }
+
+        public void Mismatch()
+        {
+            animator.SetTrigger(mismatchHash);
         }
 
         private void OnDisable()
         {
             button.onClick.RemoveAllListeners();
         }
+
+        
     }
 }

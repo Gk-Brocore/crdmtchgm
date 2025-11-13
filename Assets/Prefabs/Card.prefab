@@ -373,6 +373,7 @@ MonoBehaviour:
   debugLabel: {fileID: 0}
   backSprite: {fileID: 1643955009}
   frontSprite: {fileID: 48743670}
+  clickSound: CardClick
 --- !u!95 &3965760255979102887
 Animator:
   serializedVersion: 5

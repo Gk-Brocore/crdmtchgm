@@ -29,6 +29,11 @@ namespace Game.Managers
         [Header("Gameplay")]
         public float mismatchHideDelay = 1f;
         public bool continuousMatching = true;
+        [Header("Audio")]
+        public string mismatchSfx = "Mismatch";
+        public string matchSfx = "Match";
+        [Range(0f, 10f)]
+        public float cheerChance = 8f;
 
         private Queue<CardView> selectionQueue = new Queue<CardView>();
        
@@ -65,6 +70,9 @@ namespace Game.Managers
 
                 _first.SetMatched(true);
                 _second.SetMatched(true);
+                AudioConductor.PlaySfx(matchSfx);
+                if(UnityEngine.Random.Range(0,10) <= cheerChance)
+                    AudioConductor.PlayCheer();
 
                 UpdateCombo();
                 int _points = baseMatchScore + (comboBonus * (comboCount - 1));
@@ -80,10 +88,15 @@ namespace Game.Managers
                 comboCount.SetValue(0);
                 OnComboUpdated?.Invoke(comboCount);
 
+                AudioConductor.PlaySfx(mismatchSfx);
+                _first.Mismatch();
+                _second.Mismatch();
                 // Hide cards after small delay
                 await Task.Delay(TimeSpan.FromSeconds(mismatchHideDelay));
                 _first.Hide();
                 _second.Hide();
+
+
             }
 
             OnQueueCleared?.Invoke();

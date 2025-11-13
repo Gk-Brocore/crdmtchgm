@@ -307,7 +307,8 @@ public class AudioSequence
                         yield return null;
                     }
                 }
-
+                break;
+            case PlayStat.DontWait:
                 break;
             case PlayStat.Ignore:
                 yield break;
@@ -321,6 +322,7 @@ public class AudioSequence
     public enum PlayStat
     {
         Wait,
+        DontWait,
         Ignore
 
     }
