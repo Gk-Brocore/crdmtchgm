@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c1bb7138d52f284d84e8a755e1843d5, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  Grids:
+  grids:
     List:
     - key: easy
       value: {fileID: 11400000, guid: 681317a58d0ae1d44984711ce8473f89, type: 2}
@@ -20,9 +20,9 @@ MonoBehaviour:
       value: {fileID: 11400000, guid: f9e088bd3111e754da826dd24af3e8bb, type: 2}
     - key: hard
       value: {fileID: 11400000, guid: 59230115a071f4a4ba0899a504a7850e, type: 2}
-  ImageBanks:
+  imageBanks:
     List:
-    - key: animal
+    - key: animals
       value: {fileID: 11400000, guid: 09d4ea180f43a834d98dc69e45ffae01, type: 2}
     - key: fruits
       value: {fileID: 11400000, guid: 637186c2e80dd894983957be5790b4be, type: 2}

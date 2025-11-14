@@ -54,11 +54,17 @@ namespace Game.Cards
         {
             gridPosition = _gridPos;
 
-            if(_sprite == null)
+            transform.localScale = Vector3.one;
+           
+ 
+            if (_sprite == null)
             {
                 SetHidden(); 
                 return;
             }
+/*
+            frontSprite.transform.parent.gameObject.SetActive(false);
+            backSprite.gameObject.SetActive(true);*/
 
             cardID = _id;
             matchManager = _manager;

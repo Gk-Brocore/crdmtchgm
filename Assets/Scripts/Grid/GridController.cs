@@ -35,56 +35,70 @@ namespace Game.Grid
         private AssetReference cardPrefab; 
 
 
+
+
         private GridContainer<GridCellData> grid;
         private List<CardView> spawnedCards = new List<CardView>();
 
-        private RectTransform rectTransform;
 
         private int matchesFound = 0;
 
+
+        public Action LevelComplete;
+
+        private CanvasGroup canvasGroup;
+
         private void Awake()
         {
-            rectTransform = GetComponent<RectTransform>();
-
-            if (gridLayout == null)
-                gridLayout = GetComponent<GridLayout>();
+            canvasGroup = gridLayout.GetComponent<CanvasGroup>();
         }
 
-        private void Start()
+        private void OnEnable()
+        {
+            matchQueue.OnMatch += MatchQueue_OnMatch;
+            matchQueue.OnMismatch += MatchQueue_OnMismatch;
+            matchQueue.OnQueueCleared += MatchQueue_OnQueueCleared;
+        }
+
+
+        public void LoadGame()
         {
 
             if (!ValidateSetup())
                 return;
-
-            if (GameDataManager.Instance.HasSave(gridSettings.gridName,imageBank.BankName))
-            {
-                LoadGame();
-            }
-            else
-            { 
-                StartGame();
-            }
-        }
-
-        private void LoadGame()
-        {
             List<GridCellData> _savedGrid = GameDataManager.Instance.GetGridData(gridSettings.gridName, imageBank.BankName);
+            matchesFound = GetMatchCount(_savedGrid);
             InitilizeGrid();
             grid.FromList(_savedGrid);
             SetupUILayout();
             SpawnUICards(true);
         }
 
-        private void StartGame()
+        public int GetMatchCount(List<GridCellData> _saved)
+        {
+            int _count = 0;
+            foreach (var _cell in _saved)
+            {
+                if (_cell.matched)
+                    _count++;
+            }
+            return _count / 2;
+        }
+
+        public void StartGame()
         {
 
+            if (!ValidateSetup())
+                return;
+            matchesFound = 0;
+            matchQueue.ResetScore();
             InitilizeGrid();
 
             SetupUILayout();
 
             SpawnUICards(false);
 
-            SaveCurrentGrid();
+            SaveCurrentGrid(true);
 
 
         }
@@ -142,11 +156,11 @@ namespace Game.Grid
 
         private async void SpawnUICards(bool _load)
         {
-
+            canvasGroup.interactable = false;
             foreach (var _card in spawnedCards)
             {
                 if (_card != null)
-                    Destroy(_card);
+                    Destroy( _card.gameObject);
             }
             spawnedCards.Clear();
 
@@ -202,6 +216,7 @@ namespace Game.Grid
             {
                 _card.Hide();
             }
+            canvasGroup.interactable = true;
         }
 
 
@@ -227,12 +242,6 @@ namespace Game.Grid
             _gridCell.matched = _newState;
         }
 
-        private void OnEnable()
-        {
-            matchQueue.OnMatch += MatchQueue_OnMatch;
-            matchQueue.OnMismatch += MatchQueue_OnMismatch;
-            matchQueue.OnQueueCleared += MatchQueue_OnQueueCleared;
-        }
 
         private void MatchQueue_OnQueueCleared()
         {
@@ -255,7 +264,12 @@ namespace Game.Grid
             StartCoroutine(WaitForAnim(_card2));
 
             matchesFound++;
-
+            if(matchesFound == gridSettings.TotalCombinations)
+            {
+                GameDataManager.Instance.SetLevelCompleted(gridSettings.gridName, imageBank.BankName, true);
+                AudioConductor.PlaySfx("Win");
+                LevelComplete?.Invoke();
+            }
             IEnumerator WaitForAnim(CardView _card)
             {
                 while (_card.IsAnimDone == false)
@@ -267,13 +281,28 @@ namespace Game.Grid
             }
         }
 
-        private void OnDisable()
+    
+
+
+        private void SaveCurrentGrid(bool _newGame = false)
         {
-            matchQueue.OnMatch -= MatchQueue_OnMatch;
-            matchQueue.OnMismatch -= MatchQueue_OnMismatch;
-            matchQueue.OnQueueCleared -= MatchQueue_OnQueueCleared;
-            AddressableManager.Instance.ReleaseAll();
+            if(grid == null)
+                return;
+            var _fromGrid = grid.ToList();
+            GameDataManager.Instance.SaveGridData(gridSettings.gridName, imageBank.BankName, _fromGrid);
+            if(_newGame)
+                GameDataManager.Instance.SetLevelCompleted(gridSettings.gridName, imageBank.BankName, false);
         }
+
+        public void SetGridSettings(GridSettings _gridSettings)
+        {
+            gridSettings = _gridSettings;
+        }
+        public void SetImageBank(ImageBank _imageBank)
+        {
+            imageBank = _imageBank;
+        }
+
 
         private void OnApplicationPause(bool pause)
         {
@@ -282,16 +311,16 @@ namespace Game.Grid
                 SaveCurrentGrid();
             }
         }
-
+        private void OnDisable()
+        {
+            matchQueue.OnMatch -= MatchQueue_OnMatch;
+            matchQueue.OnMismatch -= MatchQueue_OnMismatch;
+            matchQueue.OnQueueCleared -= MatchQueue_OnQueueCleared;
+            AddressableManager.Instance.ReleaseAll();
+        }
         private void OnApplicationQuit()
         {
-            SaveCurrentGrid();   
-        }
-
-        private void SaveCurrentGrid()
-        {
-            var _fromGrid = grid.ToList();
-            GameDataManager.Instance.SaveGridData(gridSettings.gridName, imageBank.BankName, _fromGrid);
+            SaveCurrentGrid();
         }
     }
 }

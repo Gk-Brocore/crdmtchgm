@@ -12,11 +12,12 @@ namespace Game.Data
     {
 
         [SerializeField]
-        private SerializableDictionary<string,GridSettings> Grids;
+        private SerializableDictionary<string,GridSettings> grids;
 
         [SerializeField]
-        private SerializableDictionary<string, ImageBank> ImageBanks;
+        private SerializableDictionary<string, ImageBank> imageBanks;
 
-       
+        public SerializableDictionary<string, GridSettings> Grids { get => grids; set => grids = value; }
+        public SerializableDictionary<string, ImageBank> ImageBanks { get => imageBanks; set => imageBanks = value; }
     }
 }

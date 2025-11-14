@@ -89,6 +89,22 @@ namespace Game.Managers
             saveData.AddScore(gridName, bankName, score.value);
             Save();
         }
+
+        public void SetLevelCompleted(string gridName, string bankName, bool completed)
+        {
+            saveData.SetCompleted(gridName, bankName, completed);
+            Save();
+        }
+
+        public bool IsLevelCompleted(string gridName, string bankName)
+        {
+            var _levelData = saveData.Get(gridName, bankName);
+            if (_levelData != null)
+            {
+                return _levelData.completed;
+            }
+            return false;
+        }
     }
 }
 
@@ -145,6 +161,15 @@ namespace Game.Data
             }
         }
 
+        public void SetCompleted(string _gridId, string _imgId, bool _completed)
+        {
+            var _id = $"{_gridId}_{_imgId}";
+            if (levels.Contains(_id))
+            {
+                levels.Get(_id).completed = _completed;
+            }
+        }
+
         public GameLevelData Get(string _gridId, string _imgId)
         {
             var _id = $"{_gridId}_{_imgId}";
@@ -172,7 +197,20 @@ namespace Game.Data
 
         public int score;
         public int combo;
-      
+
+        public bool completed;
+
+        public int GetMatchedCount()
+        {
+            int _count = 0;
+            foreach (var cell in cells)
+            {
+                if (cell.matched)
+                    _count++;
+            }
+            return _count;
+        }
+
         // Add other game-related data as needed
     }
 }
