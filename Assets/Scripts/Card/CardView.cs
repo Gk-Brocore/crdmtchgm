@@ -36,6 +36,8 @@ namespace Game.Cards
 
         private bool isAnimDone;
 
+        private Vector2Int gridPosition;
+
         public bool IsAnimDone { get => isAnimDone; set => isAnimDone = value; }
 
         private void Awake()
@@ -48,8 +50,9 @@ namespace Game.Cards
 
         }
 
-        public void Initialize(string _id, Sprite _sprite, Vector2 _imgSize, MemoryMatchManager _manager, bool _showDebug = false)
+        public void Initialize(string _id, Vector2Int _gridPos, Sprite _sprite, Vector2 _imgSize, MemoryMatchManager _manager, bool _showDebug = false)
         {
+            gridPosition = _gridPos;
 
             if(_sprite == null)
             {
@@ -129,6 +132,11 @@ namespace Game.Cards
         public void Mismatch()
         {
             animator.SetTrigger(mismatchHash);
+        }
+
+        public Vector2Int GetGridPosition()
+        {
+            return gridPosition;
         }
 
         private void OnDisable()

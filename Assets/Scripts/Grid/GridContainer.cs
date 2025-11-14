@@ -1,5 +1,6 @@
 
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game.Grid
@@ -165,6 +166,36 @@ namespace Game.Grid
         {
             Vector2 total = GetTotalGridSize();
             return origin + total * 0.5f;
+        }
+
+        public void FromList(List<T> _list)
+        {
+            int _index = 0;
+            for (int _x = 0; _x < width; _x++)
+            {
+                for (int _y = 0; _y < height; _y++)
+                {
+                    if (_index < _list.Count)
+                    {
+                        gridArray[_x, _y] = _list[_index];
+                        _index++;
+                    }
+                }
+            }
+        }
+
+        public List<T> ToList()
+        {
+            var _list = new List<T>();
+            for (int _x = 0; _x < width; _x++)
+            {
+                for (int _y = 0; _y < height; _y++)
+                {
+                    _list.Add(gridArray[_x, _y]);
+                }
+            }
+
+            return _list;
         }
 
         // ----------------------------------------------------------
