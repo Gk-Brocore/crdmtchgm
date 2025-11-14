@@ -1,6 +1,7 @@
 using Game.Data;
 using Game.Grid;
 using Game.Utilities;
+using Game.Variables;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,6 +15,8 @@ namespace Game.Managers
 
         [SerializeField]
         private GameData gameData;
+        [SerializeField]
+        private IntVar score;
 
         private GameSaveData saveData;
 
@@ -69,8 +72,10 @@ namespace Game.Managers
 
         public List<GridCellData> GetGridData(string gridName, string bankName)
         {
-            
-            return saveData.Get(gridName, bankName)?.cells;
+
+            GameLevelData _saveData = saveData.Get(gridName, bankName);
+            score.SetValue(_saveData.score);
+            return _saveData?.cells;
         }
 
         public bool HasSave(string gridName, string bankName)
@@ -81,6 +86,7 @@ namespace Game.Managers
         public void SaveGridData(string gridName, string bankName, List<GridCellData> fromGrid)
         {
             saveData.Add(gridName, bankName, fromGrid);
+            saveData.AddScore(gridName, bankName, score.value);
             Save();
         }
     }
@@ -98,7 +104,25 @@ namespace Game.Data
             levels.New();
         }
 
-     
+        public void AddScore(string _gridId, string _imagesId, int _score)
+        {
+            var _id = $"{_gridId}_{_imagesId}";
+            if (levels.Contains(_id))
+            {
+                levels.Get(_id).score = _score;
+            }
+            else
+            {
+                GameLevelData _newLevel = new GameLevelData
+                {
+                    gridId = _gridId,
+                    imagesId = _imagesId,
+                    score = _score,
+                    cells = new List<GridCellData>()
+                };
+                levels.Add(_id, _newLevel);
+            }
+        }
 
         public void Add(string _gridId, string _imagesId, List<GridCellData> _cells)
         {
